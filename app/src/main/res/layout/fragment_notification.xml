@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/greentheme"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.NotificationFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/notificationTlbr"
+            android:layout_width="match_parent"
+            app:title="Notifications"
+            app:titleTextColor="@color/colorWhite"
+            android:background="@drawable/main_gradient"
+            android:layout_height="?attr/actionBarSize">
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:visibility="gone"
+            android:background="@color/greentheme"
+            android:id="@+id/notificationsRv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/notificationTlbr"
+            tools:listitem="@layout/row_notifications"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:background="@color/greentheme"
+        android:visibility="gone"
+        android:id="@+id/notificationsEmpty"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:orientation="vertical"
+    app:layout_anchorGravity="center_vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="225dp"
+            android:layout_height="225dp"
+            android:layout_gravity="center"
+            android:alpha="0.2"
+            android:src="@drawable/shadow"
+            android:tint="@color/colorBlack"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="175dp"
+            android:layout_height="175dp"
+            android:layout_gravity="center"
+            android:alpha="0.2"
+            android:src="@drawable/shadow"
+            android:tint="@color/colorBlack"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:elevation="10dp"
+            android:src="@drawable/ic_notifications_light_256dp"
+            app:tint="@color/colorBlack" />
+
+
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:text="Winter isn't here yet."
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+        android:textColor="@color/colorBlack" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="15dp"
+        android:gravity="center"
+        android:text="@string/notification1"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+        android:textColor="@color/colorBlack" />
+
+
+</LinearLayout>
+
+
+
+</FrameLayout>

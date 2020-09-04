@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/postsCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:paddingLeft="5dp"
+    android:background="@color/greentheme"
+    android:paddingTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:paddingRight="5dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="1dp"
+    app:cardUseCompatPadding="false">
+    <!--    app:cardBackgroundColor="#1F1B24"-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/greentheme"
+        android:paddingTop="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/uPictureIv"
+                android:layout_width="44dp"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+
+            <LinearLayout
+                android:id="@+id/profileLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/uNameTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Name"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/pTimeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_light"
+                    android:text="33 mins"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/moreBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical"
+                android:background="@null"
+                android:src="@drawable/ic_more"
+                android:tint="@color/colorBlack" />
+        </LinearLayout>
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/pTitleTv"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:padding="5dp"-->
+        <!--            android:textSize="16sp"-->
+        <!--            android:textStyle="bold"-->
+        <!--            android:text="Title"-->
+        <!--            android:textColor="@color/colorBlack"-->
+        <!--            android:autoLink="all"/>-->
+
+        <TextView
+            android:id="@+id/pDescriptionTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:autoLink="all"
+            android:fontFamily="@font/poppins"
+            android:padding="5dp"
+            android:text="This is the description"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ProgressBar
+                android:id="@+id/progress"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="200dp"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:clickable="true"
+                android:focusable="true"
+                android:id="@+id/pImageIv"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintDimensionRatio="1:1"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#F5F0F0" />
+
+        <TextView
+            android:id="@+id/stamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins"
+            android:paddingLeft="5dp"
+            android:layout_marginTop="@dimen/padding_10"
+            android:paddingBottom="5dp"
+            android:text="stamp"
+            android:textColor="@color/colorBlack"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/greentheme"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/likeBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@color/colorBlack"
+                android:backgroundTint="@color/greentheme"
+                android:drawableStart="@drawable/thumb_up_24px"
+                android:paddingStart="30dp"
+                android:paddingEnd="5dp"
+                android:textColor="@color/colorBlack" />
+
+
+            <Button
+                android:id="@+id/commentBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/greentheme"
+                android:drawableStart="@drawable/chat_bubble_outline_24px"
+                android:paddingStart="30dp"
+                android:paddingEnd="5dp"
+                android:textColor="@color/colorBlack" />
+
+
+
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/greentheme"
+                android:drawableStart="@drawable/bookmark_border_24px"
+                android:paddingStart="30dp"
+                android:paddingEnd="5dp" />
+
+
+
+            <Button
+                android:id="@+id/readMoreButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/greentheme"
+                android:drawableStart="@drawable/launch_24px"
+                android:paddingStart="30dp"
+                android:paddingEnd="5dp" />
+
+            <!--            <Button-->
+            <!--                android:id="@+id/shareBtn"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_weight="1"-->
+            <!--                android:text="SHARE"-->
+            <!--                android:background="#1F1B24"-->
+            <!--                android:drawablePadding="5dp"-->
+            <!--                android:textColor="@color/text_color"-->
+            <!--                android:drawableStart="@drawable/ic_share"/>-->
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:id="@+id/pLikesTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins"
+                android:paddingLeft="5dp"
+                android:paddingBottom="5dp"
+                android:text="Likes"
+                android:textColor="@color/colorBlack"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/pCommentsTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"
+                android:text="Comments"
+                android:textAlignment="textEnd"
+                android:textColor="@color/colorBlack"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/greentheme"
+    tools:context=".AboutActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/abtUsTlbr"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@drawable/main_gradient"
+        app:title="About Us"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/actionBarSize"
+
+         android:background="@color/greentheme"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/aboutBEAM"
+            android:textAlignment="center"
+            android:textColor="@color/bluetheme"
+            android:textSize="24sp" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/logo_blue_color"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/abtBIcon"
+            android:textAlignment="center"
+            android:textColor="@color/colorBlack"
+            android:textSize="8sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_light"
+            android:text="@string/aboutDesc"
+            android:textAlignment="center"
+            android:textColor="@color/colorBlack" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/abtTogether"
+            android:textAlignment="center"
+            android:textColor="#121212" />
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:lottie_autoPlay="true"
+            android:layout_marginTop="@dimen/_50sdp"
+            app:lottie_fileName="a.json"
+            app:lottie_loop="true" />
+
+    </LinearLayout>
+
+</RelativeLayout>

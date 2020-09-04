@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">BEAM</string>
+    <string name="notification1">You have not received any notifications."\n"We will notify you once we have received any.</string>
+    <string name="empty1">You are 404 million kilometres away from us."\n"Please tap on refresh button to try connecting back.</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+
+    <string name="welcome">Welcome!</string>
+    <string name="welcomeSub">Let\'s work on this together</string>
+    <string name="login">Login With Google</string>
+
+    <string name="aboutBEAM">BEAM - Be A Motivator</string>
+    <string name="abtBIcon">Together We Achieve</string>
+    <string name="aboutDesc">This is an  initiative by the students for the students\nOur goal is to improve each of us by working together as one</string>
+    <string name="abtTogether">Let\'s do this together!</string>
+</resources>

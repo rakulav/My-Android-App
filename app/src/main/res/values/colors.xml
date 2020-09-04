@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1c2541</color>
+    <color name="colorPrimaryDark">#0052D4</color>
+    <color name="colorAccent">#9b1ac9</color>
+    <color name="colorBlack">#000</color>
+    <color name="colorWhite">#fff</color>
+
+    <color name="center">#4364F7</color>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="text_color">#03DAC5</color>
+    <color name="colorText">#F3F3F4</color>
+    <color name="fontColor">#616161</color>
+    <color name="whitePassive">#ece9e6</color>
+    <color name="greentheme">#fff</color>
+    <color name="bluetheme">#6FB1FC</color>
+    <color name="color_lightGray">#E8EBEC</color>
+    <color name="gray">#253A4B</color>
+    <color name="buttonxd">#253A4B</color>
+    <color name="primarygreen">#0eec50</color>
+    <color name="primaryblue">#33dee1</color>
+    <color name="primarygreendark">#00b916</color>
+    <color name="primarybluedark">#00acaf</color>
+    <color name="oxblue">#0B132B</color>
+    <color name="cadet">#1C2541</color>
+    <color name="independance">#3A506B</color>
+    <color name="transparent">#00000000</color>
+    <color name="red">#F40606</color>
+
+    <color name="grey1">#e0e0e0</color>
+
+</resources>

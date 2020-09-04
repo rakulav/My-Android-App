@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:background="@color/greentheme"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:background="@color/greentheme"
+        android:layout_height="match_parent">
+
+
+        <include layout="@layout/include_drawer_content" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <!--navigation drawer menu-->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view_home"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/greentheme"
+        android:fitsSystemWindows="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:minHeight="220dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:background="@drawable/main_gradient" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imagenavigation"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="-36dp"
+                    android:src="@drawable/logo_blue_color"
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_medium"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/navigationname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        android:textColor="@color/colorBlack"
+                        app:fontFamily="sans-serif-medium" />
+
+                    <TextView
+                        android:id="@+id/navigationemail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                        android:textColor="@color/colorBlack"
+                        app:fontFamily="sans-serif-medium" />
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/setgoals"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_xmlarge"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_marginTop="@dimen/padding_10"
+                 android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:focusable="true">
+
+                <View
+                    android:layout_width="20dp"
+                    android:layout_height="0dp" />
+                <ImageButton
+                    android:layout_width="@dimen/spacing_xmlarge"
+                    android:layout_height="@dimen/spacing_xmlarge"
+                    android:background="@android:color/transparent"
+                    android:tint="@color/colorBlack"
+                    app:srcCompat="@drawable/ic_baseline_flag_24" />
+
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="0dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Set Goals"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:textColor="@color/colorBlack"
+                    app:fontFamily="sans-serif-medium" />
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:id="@+id/bunkcheck"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_xmlarge"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_marginTop="@dimen/padding_10"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:focusable="true">
+
+                <View
+                    android:layout_width="20dp"
+                    android:layout_height="0dp" />
+                <ImageButton
+                    android:layout_width="@dimen/spacing_xmlarge"
+                    android:layout_height="@dimen/spacing_xmlarge"
+                    android:background="@android:color/transparent"
+                    android:tint="@color/colorBlack"
+                    app:srcCompat="@drawable/ic_bunkcheck" />
+
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="0dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bunk Check"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:textColor="@color/colorBlack"
+                    app:fontFamily="sans-serif-medium" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/personalInfo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_xmlarge"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_marginTop="@dimen/padding_10"
+
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:focusable="true">
+
+                <View
+                    android:layout_width="20dp"
+                    android:layout_height="0dp" />
+                <ImageButton
+                    android:layout_width="@dimen/spacing_xmlarge"
+                    android:layout_height="@dimen/spacing_xmlarge"
+                    android:background="@android:color/transparent"
+                    android:tint="@color/colorBlack"
+                    app:srcCompat="@drawable/ic_personalinfo" />
+
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="0dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="My Profile"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:textColor="@color/colorBlack"
+                    app:fontFamily="sans-serif-medium" />
+
+            </LinearLayout>
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/saved_Posts"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="@dimen/spacing_xmlarge"-->
+<!--                android:background="?attr/selectableItemBackground"-->
+<!--                android:clickable="true"-->
+<!--                android:layout_marginTop="@dimen/padding_10"-->
+<!--                android:onClick="onClick"-->
+<!--                android:gravity="center_vertical"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:focusable="true">-->
+
+<!--                <View-->
+<!--                    android:layout_width="20dp"-->
+<!--                    android:layout_height="0dp" />-->
+<!--                <ImageButton-->
+<!--                    android:layout_width="@dimen/spacing_xmlarge"-->
+<!--                    android:layout_height="@dimen/spacing_xmlarge"-->
+<!--                    android:background="@android:color/transparent"-->
+<!--                    android:tint="@color/colorBlack"-->
+<!--                    app:srcCompat="@drawable/ic_saved" />-->
+
+<!--                <View-->
+<!--                    android:layout_width="5dp"-->
+<!--                    android:layout_height="0dp" />-->
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Saved Posts"-->
+<!--                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"-->
+<!--                    android:textColor="@color/colorBlack"-->
+<!--                    app:fontFamily="sans-serif-medium" />-->
+
+<!--            </LinearLayout>-->
+            <LinearLayout
+                android:id="@+id/menuSuggestions"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_xmlarge"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_marginTop="@dimen/padding_10"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:focusable="true">
+
+                <View
+                    android:layout_width="20dp"
+                    android:layout_height="0dp" />
+                <ImageButton
+                    android:layout_width="@dimen/spacing_xmlarge"
+                    android:layout_height="@dimen/spacing_xmlarge"
+                    android:background="@android:color/transparent"
+                    android:tint="@color/colorBlack"
+                    app:srcCompat="@drawable/ic_suggestion" />
+
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="0dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Suggestions"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:textColor="@color/colorBlack"
+                    app:fontFamily="sans-serif-medium" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/aboutus"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_xmlarge"
+                android:layout_marginTop="@dimen/padding_10"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="20dp"
+                    android:layout_height="0dp" />
+
+                <ImageButton
+                    android:layout_width="@dimen/spacing_xmlarge"
+                    android:layout_height="@dimen/spacing_xmlarge"
+                    android:background="@android:color/transparent"
+                    android:tint="@color/colorBlack"
+                    app:srcCompat="@drawable/ic_info" />
+
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="0dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="About us"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:textColor="@color/colorBlack"
+                    app:fontFamily="sans-serif-medium" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/menuLogout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_xmlarge"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_marginTop="@dimen/padding_10"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:focusable="true">
+
+                <View
+                    android:layout_width="20dp"
+                    android:layout_height="0dp" />
+                <ImageButton
+                    android:layout_width="@dimen/spacing_xmlarge"
+                    android:layout_height="@dimen/spacing_xmlarge"
+                    android:background="@android:color/transparent"
+                    android:tint="@color/colorBlack"
+                    app:srcCompat="@drawable/ic_logout" />
+
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="0dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Logout"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:textColor="@color/colorBlack"
+                    app:fontFamily="sans-serif-medium" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/greentheme"
+    android:layout_height="match_parent"
+    tools:context=".fragments.SearchFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Toolbar
+            android:id="@+id/searchToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/main_gradient">
+
+            <EditText
+                android:id="@+id/searchEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/bg_white_corner_15"
+                   android:backgroundTint="@color/colorPrimaryDark"
+                android:drawableEnd="@drawable/ic_search"
+                android:drawableTint="@color/colorWhite"
+                android:hint="Search name or group"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorWhite" />
+
+        </Toolbar>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/searchTabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/greentheme"
+            app:tabTextColor="@color/colorBlack"
+            android:layout_below="@id/searchToolbar"
+            app:tabIndicatorColor="@color/colorBlack">
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/userTab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Users"
+
+
+                />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/groupTab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Groups" />
+
+
+        </com.google.android.material.tabs.TabLayout>
+
+
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/search_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/greentheme"
+            android:layout_below="@+id/searchTabs"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/myGroupsRv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/search_recyclerView"
+            android:orientation="horizontal"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    
+
+</FrameLayout>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/greentheme"
+    tools:context=".Attendance">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Check how many classes you can afford to bunk "
+        android:textAlignment="center"
+        android:textColor="@color/colorBlack"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emptyTxt2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/emptyTxt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BunkCheck"
+        android:textColor="@color/primarybluedark"
+        android:textSize="28dp"
+        android:fontFamily="@font/poppins_bold"
+        android:layout_marginStart="@dimen/padding_10"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="32dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:layout_marginStart="@dimen/padding_10"
+        android:layout_marginEnd="@dimen/padding_10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.202">
+
+        <EditText
+            android:id="@+id/checkpresent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button"
+            android:backgroundTint="@color/greentheme"
+            android:ems="10"
+            android:fontFamily="@font/poppins_light"
+            android:hint="Attended"
+            android:inputType="number"
+            android:padding="10dp"
+            android:textColor="@color/colorBlack"
+            android:textColorHint="@color/colorBlack"
+            android:textColorLink="@color/colorBlack"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/atitle"
+            app:layout_constraintVertical_bias="0.073" />
+
+        <EditText
+            android:id="@+id/checktotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:fontFamily="@font/poppins_light"
+            android:hint="Conducted"
+            android:inputType="number"
+            android:background="@drawable/button"
+            android:backgroundTint="@color/greentheme"
+            android:padding="10dp"
+            android:textColor="@color/colorBlack"
+            android:textColorHint="@color/colorBlack"
+            android:textColorLink="@color/colorBlack"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkpresent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/checkgoal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:fontFamily="@font/poppins_light"
+            android:hint="Attendance Goal %"
+            android:inputType="number"
+            android:background="@drawable/button"
+            android:backgroundTint="@color/greentheme"
+            android:padding="10dp"
+            android:textColor="@color/colorBlack"
+            android:textColorHint="@color/colorBlack"
+            android:textColorLink="@color/colorBlack"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checktotal"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/atitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="BunkCheck"
+            android:textColor="@color/colorWhite"
+            android:textSize="21dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.442"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/acheck"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="219dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/button"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins_bold"
+            android:padding="10dp"
+            android:paddingHorizontal="70dp"
+            android:paddingVertical="15dp"
+            android:text="Check"
+            android:textColor="@color/colorWhite"
+            android:textColorLink="#FFFFFF"
+            android:textIsSelectable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkgoal"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/aresult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center|center_horizontal"
+
+            android:textColor="@color/colorWhite"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/acheck" />
+
+        <TextView
+            android:id="@+id/bresult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center|center_horizontal"
+
+            android:textColor="@color/colorWhite"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/aresult" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
